@@ -20,4 +20,4 @@ jobs:
       - name: Configure Alibaba Cloud OSSUTIL
         run: ./ossutil64 config -i ${ACCESS_KEY} -k ${ACCESS_KEY_SECRET} -e ${ENDPOINT} -c .ossutilconfig
       - name: Upload the web folder to the chosen OSS bucket
-        run: ./ossutil64 --config-file .ossutilconfig cp ${{ github.workspace }}/js oss://${BUCKET}/js -r -f --meta=Cache-Control:public, max-age=2678400, must-revalidate#Content-Type:application/javascript
+        run: ./ossutil64 --config-file .ossutilconfig cp ${{ github.workspace }}/js oss://${BUCKET}/js -r -f --meta=Cache-Control:"public, max-age=2678400, must-revalidate"#Content-Type:application/javascript
