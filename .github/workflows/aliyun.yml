@@ -2,7 +2,7 @@ name: Push to Alibaba Cloud OSS
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 env:
   BUCKET: azszero
